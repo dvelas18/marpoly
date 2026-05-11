@@ -12,7 +12,7 @@ The package is designed for empirical users who want a direct workflow:
 
 ## Installation
 
-After uploading this repository to GitHub:
+GitHub:
 
 ```r
 # install.packages("remotes")
