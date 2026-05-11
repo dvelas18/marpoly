@@ -1,0 +1,25 @@
+citHeader("If you use marpoly, please cite:")
+
+bibentry(
+  bibtype = "Article",
+  title = "Spectral estimation for mixed causal-noncausal autoregressive models",
+  author = c(person("Alain", "Hecq"), person("Daniel", "Velasquez-Gaviria")),
+  journal = "Econometric Reviews",
+  year = "2025",
+  volume = "44",
+  number = "7",
+  pages = "939--962",
+  doi = "10.1080/07474938.2025.2465372"
+)
+
+bibentry(
+  bibtype = "Article",
+  title = "Frequency domain minimum distance inference for possibly noninvertible and noncausal ARMA models",
+  author = c(person("Carlos", "Velasco"), person("Ignacio N.", "Lobato")),
+  journal = "The Annals of Statistics",
+  year = "2018",
+  volume = "46",
+  number = "2",
+  pages = "555--579",
+  doi = "10.1214/17-AOS1560"
+)

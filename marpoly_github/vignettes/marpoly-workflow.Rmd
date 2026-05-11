@@ -1,0 +1,47 @@
+---
+title: "marpoly workflow"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{marpoly workflow}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, message=FALSE}
+library(marpoly)
+```
+
+This vignette demonstrates a complete MAR identification workflow.
+
+```{r}
+sim <- marpoly_simulate(
+  n = 500,
+  causal = 0.20,
+  noncausal = 0.70,
+  dist = "skewt",
+  df = 20,
+  gamma = 1.5,
+  seed = 123
+)
+```
+
+Select the pseudo-causal AR order.
+
+```{r}
+sel <- marpoly_select_p(sim$x, p_max = 4)
+sel
+```
+
+Estimate and rank root allocations using the spectrum and bispectrum.
+
+```{r}
+fit <- marpoly_fit(sim$x, p = 2, orders = c(2, 3), grid_size = 20)
+summary(fit)
+```
+
+Extract residuals and check remaining dependence.
+
+```{r}
+e <- marpoly_errors(fit)
+marpoly_diagnostics(e, powers = c(1, 2), lag.max = 20)
+```
