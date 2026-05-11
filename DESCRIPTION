@@ -1,0 +1,20 @@
+Package: marpoly
+Type: Package
+Title: Mixed Causal-Noncausal Autoregressions and Polyspectral Estimation
+Version: 0.2.0
+Authors@R: c(
+    person("Daniel", "Velasquez-Gaviria", email = "d.velasquezgaviria@maastrichtuniversity.nl", role = c("aut", "cre")),
+    person("Alain", "Hecq", role = "ctb")
+  )
+Description: Tools for mixed causal-noncausal autoregressive models and higher-order polyspectral analysis. The package implements simulation of MAR(r,s) processes, second-, third-, and fourth-order periodograms and spectral densities, frequency-domain minimum-distance estimation using second-order pseudo-causal normalization and root-allocation starts, all root allocations for a selected autoregressive order, residual extraction, and diagnostic plotting.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Depends: R (>= 3.6.0)
+Imports: stats, graphics, utils
+Suggests: testthat (>= 3.0.0), knitr, rmarkdown
+VignetteBuilder: knitr
+Config/testthat/edition: 3
+URL: https://github.com/dvelas18/marpoly
+BugReports: https://github.com/dvelas18/marpoly/issues
