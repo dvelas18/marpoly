@@ -12,8 +12,6 @@ The package is designed for empirical users who want a direct workflow:
 
 ## Installation
 
-After uploading this repository to GitHub:
-
 ```r
 # install.packages("remotes")
 remotes::install_github("dvelas18/marpoly")
